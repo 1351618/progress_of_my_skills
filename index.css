@@ -3,25 +3,40 @@ body {
     height: 100vh;
     width: 100vw;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .icon-skills {
     display: flex;
     justify-content: center;
-    margin-top: 45vh;
     gap: 1vw;
     flex-direction: row;
     flex-wrap: wrap;
+    max-height: 100px;
+    align-items: stretch;
 }
 
 .background-color-img {
     position: absolute;
     top: 0;
-    left: -21px;
+    left: 0;
     height: 100vh;
     width: 102vw;
-    background-size: cover;
     opacity: 0.3;
+}
+
+@media (max-aspect-ratio: 1/1) {
+    .background-color-img {
+        height: 100vh;
+    }
+}
+
+@media (min-aspect-ratio: 1/1) {
+    .background-color-img {
+        width: 100vw;
+    }
 }
 
 .background-color-foto {
@@ -44,13 +59,14 @@ body {
 .icon-skills__icon {
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
     z-index: 5;
+    align-items: stretch;
+    max-height: 100px;
 }
 
 .icon-skills__icon img {
-    height: 100px;
+    max-height: 100px;
 }
 .icon-skills__icon p {
     color: goldenrod;
@@ -58,10 +74,12 @@ body {
     margin: 0;
 }
 
-/* @media (max-width: 2000px) {
-    body {
-        height: 100vh;
-        width: 100vw;
-        overflow: hidden;
+@media (max-height: 100px) {
+    .icon-skills__icon img {
+        max-height: 50px;
     }
-} */
+
+    .icon-skills__icon p {
+        font-size: 20px;
+    }
+}
