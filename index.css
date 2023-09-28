@@ -1,85 +1,99 @@
 body {
-    background-color: #00003a;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  background-color: #00003a;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .icon-skills {
-    display: flex;
-    justify-content: center;
-    gap: 1vw;
-    flex-direction: row;
-    flex-wrap: wrap;
-    max-height: 100px;
-    align-items: stretch;
+  display: flex;
+  justify-content: center;
+  gap: 1vw;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-height: 100px;
+  align-items: stretch;
 }
 
 .background-color-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 102vw;
-    opacity: 0.3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 102vw;
+  opacity: 0.3;
 }
 
 @media (max-aspect-ratio: 1/1) {
-    .background-color-img {
-        height: 100vh;
-    }
+  .background-color-img {
+    height: 100vh;
+  }
 }
 
 @media (min-aspect-ratio: 1/1) {
-    .background-color-img {
-        width: 100vw;
-    }
+  .background-color-img {
+    width: 100vw;
+  }
 }
 
 .background-color-foto {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    background-color: #030614;
-    overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #030614;
+  overflow: hidden;
 }
 .background-color-foto_img {
-    position: absolute;
-    top: -22vw;
-    right: -47vw;
-    width: 100vw;
-    background-size: cover;
-    opacity: 0.5;
+  position: absolute;
+  top: -22vw;
+  right: -47vw;
+  width: 100vw;
+  background-size: cover;
+  opacity: 0.5;
 }
 .icon-skills__icon {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    z-index: 5;
-    align-items: stretch;
-    max-height: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 5;
+  align-items: stretch;
+  max-height: 100px;
 }
 
 .icon-skills__icon img {
-    max-height: 100px;
+  max-height: 100px;
 }
 .icon-skills__icon p {
-    color: goldenrod;
-    font-size: 36px;
-    margin: 0;
+  color: goldenrod;
+  font-size: 36px;
+  margin: 0;
+}
+
+@media (max-width: 1120px) {
+  .icon-skills {
+    justify-content: space-around;
+    align-content: center;
+  }
+  .icon-skills__icon img {
+    max-height: 50px;
+  }
+
+  .icon-skills__icon p {
+    font-size: 20px;
+  }
 }
 
 @media (max-height: 100px) {
-    .icon-skills__icon img {
-        max-height: 50px;
-    }
+  .icon-skills__icon img {
+    max-height: 50px;
+  }
 
-    .icon-skills__icon p {
-        font-size: 20px;
-    }
+  .icon-skills__icon p {
+    font-size: 20px;
+  }
 }
